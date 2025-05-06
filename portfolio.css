@@ -1,0 +1,421 @@
+/* Inverted hero section styles */
+.hero-section-inverted {
+    width: 100%;
+    height: 280px;
+    background-color: #000; /* Inverted from white to black */
+    border-right: 1px solid rgba(255, 255, 255, 0.15); /* Inverted border color */
+    border-left: 1px solid rgba(255, 255, 255, 0.15); /* Inverted border color */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 32px 32px 32px;
+    max-width: 1250px;
+    margin: 0 auto;
+    position: relative; /* Important for positioning the video background */
+    overflow: hidden; /* Prevent video from spilling outside */
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Place behind other elements */
+}
+
+.portfoliotitle-container {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+    text-align: left;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire container */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* The 20% black overlay */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 20% black overlay */
+    z-index: 1; /* Place above video but below content */
+}
+
+.hero-container-inverted {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.phone-icon-light {
+    width: 18px;
+}
+
+.hero-navtitle-inverted {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center aligned instead of left */
+    justify-content: space-between;
+    gap: 64px; /* Increased gap for better spacing without booking card */
+    text-align: center; /* Center text */
+}
+
+.hero-title-inverted {
+    font-size: 64px;
+    letter-spacing: 0px;
+    line-height: 90%;
+    font-weight: 400;
+    color: #fff; /* Inverted text color */
+    text-align: center; /* Center text */
+    width: 100%;
+}
+
+.herodescription-inverted {
+    position: relative;
+    font-size: 20px;
+    line-height: 130%;
+    color: #ffffffbc; /* Lighter gray for inverted dark theme */
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: auto;
+    font-weight: 400;
+    margin: 0 auto; /* Center */
+}
+
+.button-inverted {
+    border-radius: 8px;
+    background-color: #ffffff04; /* Darker button for dark theme */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Lighter border for dark theme */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff; /* White text */
+}
+
+.category-dropdown {
+    display: none; /* Hidden by default on desktop */
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.category-select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e8e8e8;
+    background-color: #fff;
+    font-family: Figtree, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='6' viewBox='0 0 12 6'%3E%3Cpath fill='%23000' d='M0 0l6 6 6-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}
+
+.button-inverted:hover {
+    background-color: #ffffff25; /* Slightly lighter on hover */
+}
+
+/* Portfolio Section Styles */
+.category-label {
+    position: relative;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.category-link {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 17px;
+    cursor: pointer;
+    border-bottom: 1px solid #00000000;
+    transition: all 0.2s ease;
+}
+
+.category-link:hover {
+    background-color: rgba(0, 0, 0, 0.015);
+    border-bottom: 1px solid #0000003d;
+}
+
+.category-link-active {
+    flex: 1;
+    border-bottom: 1px solid #000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 17px;
+    cursor: pointer;
+}
+
+.category-tabs {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0px;
+}
+
+.work-img {
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    background-color: #d9d9d9;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.work-cat {
+    position: relative;
+    line-height: 100%;
+    font-weight: 300;
+}
+
+.work-title {
+    align-self: stretch;
+    position: relative;
+    font-size: 22px;
+    line-height: 26.4px;
+    font-weight: 600;
+}
+
+.work-description {
+    align-self: stretch;
+    position: relative;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.work-details {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.work-card {
+    flex: 1 0 calc(33.333% - 11px); /* Grow equally, don't shrink, and base width of 33.333% minus gap */
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid #e8e8e8;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 8px;
+    gap: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    max-width: calc(33.333% - 11px); /* Ensures exactly 3 per row */
+}
+
+.work-card:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.portfolio-row {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start; /* Start from the left */
+    gap: 16px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.portfolio-grid {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center entire grid */
+    justify-content: flex-start;
+    gap: 16px;
+    text-align: left;
+    font-size: 16px;
+    width: 100%;
+}
+
+.portfolio-section {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 32px 32px 32px;
+    box-sizing: border-box;
+    gap: 32px;
+    max-width: 1250px;
+    text-align: center;
+    font-size: 15px;
+    color: #000;
+    font-family: Figtree;
+    margin: 0 auto;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles for both sections */
+@media screen and (max-width: 1200px) {
+    .portfolio-row {
+        justify-content: center; /* Center cards on medium screens */
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    .hero-section-inverted {
+        padding: 32px 32px 32px 32px;
+    }
+    
+    .category-tabs {
+        display: none; /* Hide tabs on mobile */
+    }
+    
+    .category-dropdown {
+        display: block; /* Show dropdown on mobile */
+    }
+
+    .hero-title-inverted {
+        font-size: 64px;
+    }
+    
+    .category-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .work-card {
+        flex: 1 0 calc(50% - 11px); /* Grow equally, don't shrink, and base width of 33.333% minus gap */
+        max-width: calc(50% - 11px); /* Ensures exactly 3 per row */
+    }
+    
+    .portfolio-section {
+        max-width: 100%;
+        border-left: none;
+        border-right: none;
+        padding: 24px;
+        gap: 0px;
+    }
+    
+    .portfolio-row {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+    
+    .work-img {
+        height: 250px;
+    }
+    
+    .work-img {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-title-inverted {
+        font-size: 42px;
+    }
+    
+    .hero-section-inverted {
+        padding: 24px;
+        min-height: 300px;
+    }
+    
+    .button-inverted {
+        padding: 8px 12px;
+    }
+    
+    .portfolio-section {
+        padding: 16px;
+        gap: 0px;
+    }
+    
+    .category-link, .category-link-active {
+        padding: 8px 12px;
+    }
+    
+    .work-card {
+        flex: 0 0 100%; /* Don't grow or shrink, take full width */
+        max-width: 100%; /* Override the desktop max-width */
+        width: 100%; /* Ensure full width */
+    }
+    
+    .work-img {
+        height: 250px;
+    }
+}
+
+/* Animation keyframes for the work cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Base styles for the animated cards */
+.animate-card {
+    opacity: 0; /* Start invisible */
+    animation-name: fadeInUp;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards; /* Keep the end state */
+    animation-timing-function: ease-out;
+    /* The animation-delay is set inline for each card */
+}
+
+
+/* Temporarily hide work card text */
+.work-details {
+    display: none;
+}

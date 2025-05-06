@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="/portfolio.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap" />
+    <style>
+        /* Override styles for static background */
+        .hero-section-inverted {
+            background-color: #141414; /* Dark grey background */
+        }
+        
+        /* Remove video-related elements */
+        .video-background {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="home">
+        <div class="hero-section-inverted">
+            <!-- Removed video background container -->
+            
+            <div class="hero-container-inverted">
+                <div class="hero-navtitle-inverted">
+                    <div class="hero-nav">
+                        <div class="hero-nav1">
+                            <div class="main-logo">
+                                <img class="main-logo-group" alt="" src="assets/main-logo-light.svg">
+                            </div>
+                            <div class="button-parent">
+                                <div class="button-inverted">
+                                    <div class="button-label">See Work</div>
+                                </div>
+                                <div class="button-inverted">
+                                    <div class="button-container">
+                                        <img class="phone-icon-light" alt="" src="assets/phone-icon-light.svg">
+                                        <div class="button-label">Book a call</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfoliotitle-container">
+                        <div class="hero-title-inverted">Recent Requests</div>
+                        <div class="herodescription-inverted">Check out some of our recent design work.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="portfolio-container"></div>
+        
+    </div>
+    <script src="portfolio-section.js"></script>
+    <script>
+        const portfolio = new PortfolioSection({
+            categories: ["All", "Memes", "Graphic Design", "Packaging", "UI/UX", "Branding", "Merch", "Newsletter"],
+            activeCategory: "All",
+            portfolioItems: [
+                {
+                    category: "Graphic Design",
+                    title: "E-commerce Website Redesign",
+                    description: "Complete overhaul of an online store interface",
+                    image: "https://request-digital.b-cdn.net/graphicdesign/bit-graphicdesign.jpg"
+                },
+                {
+                    category: "Graphic Design",
+                    title: "E-commerce Website Redesign",
+                    description: "Complete overhaul of an online store interface",
+                    image: "https://request-digital.b-cdn.net/graphicdesign/gecky-car-1.jpg"
+                },
+                {
+                    category: "Graphic Design",
+                    title: "E-commerce Website Redesign",
+                    description: "Complete overhaul of an online store interface",
+                    image: "https://request-digital.b-cdn.net/graphicdesign/gecky-car-2.jpg"
+                },
+                {
+                    category: "Graphic Design",
+                    title: "E-commerce Website Redesign",
+                    description: "Complete overhaul of an online store interface",
+                    image: "https://request-digital.b-cdn.net/graphicdesign/ll-graphicdesign.jpg"
+                },
+                {
+                    category: "Graphic Design",
+                    title: "E-commerce Website Redesign",
+                    description: "Complete overhaul of an online store interface",
+                    image: "https://request-digital.b-cdn.net/graphicdesign/lm-car.jpg"
+                },
+                {
+                    category: "Graphic Design",
+                    title: "E-commerce Website Redesign",
+                    description: "Complete overhaul of an online store interface",
+                    image: "https://request-digital.b-cdn.net/graphicdesign/rr-graphicdesign.jpg"
+                },
+                {
+                    category: "Graphic Design",
+                    title: "E-commerce Website Redesign",
+                    description: "Complete overhaul of an online store interface",
+                    image: "https://request-digital.b-cdn.net/graphicdesign/sl-car.jpg"
+                },
+                {
+                    category: "Graphic Design",
+                    title: "E-commerce Website Redesign",
+                    description: "Complete overhaul of an online store interface",
+                    image: "https://request-digital.b-cdn.net/graphicdesign/sl-graphics.jpg"
+                },
+                {
+                    category: "Graphic Design",
+                    title: "E-commerce Website Redesign",
+                    description: "Complete overhaul of an online store interface",
+                    image: "https://request-digital.b-cdn.net/graphicdesign/ss-graphicdesign-2.jpg"
+                },
+                {
+                    category: "Graphic Design",
+                    title: "E-commerce Website Redesign",
+                    description: "Complete overhaul of an online store interface",
+                    image: "https://request-digital.b-cdn.net/graphicdesign/sv-graphicdesign.jpg"
+                },
+                {
+                    category: "Memes",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/memes/dogetimes-meme-1.jpg"
+                },
+                {
+                    category: "Memes",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/memes/dogetimes-meme-2.jpg"
+                },
+                {
+                    category: "Memes",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/memes/dogetimes-meme-3.jpg"
+                },
+                {
+                    category: "Memes",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/memes/dogetimes-meme-4.jpg"
+                },
+                {
+                    category: "Memes",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/memes/gecky-meme-1.jpg"
+                },
+                {
+                    category: "Memes",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/memes/gecky-meme-2.jpg"
+                },
+                {
+                    category: "Memes",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/memes/gecky-meme-3.jpg"
+                },
+                {
+                    category: "Memes",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/memes/gecky-meme-4.jpg"
+                },
+                {
+                    category: "Memes",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/memes/puppets-meme-1.jpg"
+                },
+                {
+                    category: "Memes",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/memes/puppets-meme-2.jpg"
+                },
+                {
+                    category: "Memes",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/memes/puppets-meme-3.jpg"
+                },
+                {
+                    category: "Memes",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/memes/puppets-meme-4.jpg"
+                },
+                {
+                    category: "Memes",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/memes/puppets-meme-5.jpg"
+                },
+                {
+                    category: "Memes",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/memes/puppets-meme-6.jpg"
+                },
+                {
+                    category: "Memes",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/memes/slerf-meme-1.jpg"
+                },
+                {
+                    category: "Memes",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/memes/slerf-meme-2.jpg"
+                },
+                {
+                    category: "Memes",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/memes/slerf-meme-3.jpg"
+                },
+                {
+                    category: "Memes",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/memes/slerf-meme-4.jpg"
+                },
+                {
+                    category: "Packaging",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/packaging/ll-packaging.jpg"
+                },
+                {
+                    category: "Packaging",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/packaging/ss-packaging.jpg"
+                },
+                {
+                    category: "Packaging",
+                    title: "Tech Startup Branding",
+                    description: "Modern logo design for a technology company",
+                    image: "https://request-digital.b-cdn.net/packaging/sv-packaging.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/aa-ui-1.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/aa-ui-2.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/aa-ui-3.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/af-ui-2.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/af-ui-3.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/af-ui.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/agent-ui-1.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/agent-ui-2.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/agent-ui-3.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/agent-ui-4.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/chamber-ui-1.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/chamber-ui-2.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/chamber-ui-3.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/doge-ui-1.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/doge-ui-2.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/doge-ui-3.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/dogestore-ui-1.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/dogestore-ui-2.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/drip-ui-1.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/drip-ui-2.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/drip-ui-3.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/drip-ui-4.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/drip-ui-5.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/ll-ui-1.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/ll-ui-2.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/pl-ui-1.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/pl-ui-2.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/pl-ui-3.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/rr-ui.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/sl-ui-1.jpg"
+                },
+                {
+                    category: "UI/UX",
+                    title: "Mobile App Interface",
+                    description: "User-friendly design for a productivity app",
+                    image: "https://request-digital.b-cdn.net/ui/sl-ui.jpg"
+                },
+                {
+                    category: "Branding",
+                    title: "Restaurant Rebrand",
+                    description: "Fresh identity for an established restaurant chain",
+                    image: "https://request-digital.b-cdn.net/branding/ll-branding.jpg"
+                },
+                {
+                    category: "Branding",
+                    title: "Restaurant Rebrand",
+                    description: "Fresh identity for an established restaurant chain",
+                    image: "https://request-digital.b-cdn.net/branding/lm-branding-2.jpg"
+                },
+                {
+                    category: "Branding",
+                    title: "Restaurant Rebrand",
+                    description: "Fresh identity for an established restaurant chain",
+                    image: "https://request-digital.b-cdn.net/branding/lm-branding.jpg"
+                },
+                {
+                    category: "Branding",
+                    title: "Restaurant Rebrand",
+                    description: "Fresh identity for an established restaurant chain",
+                    image: "https://request-digital.b-cdn.net/branding/rr-branding-2.jpg"
+                },
+                {
+                    category: "Branding",
+                    title: "Restaurant Rebrand",
+                    description: "Fresh identity for an established restaurant chain",
+                    image: "https://request-digital.b-cdn.net/branding/rr-branding.jpg"
+                },
+                {
+                    category: "Branding",
+                    title: "Restaurant Rebrand",
+                    description: "Fresh identity for an established restaurant chain",
+                    image: "https://request-digital.b-cdn.net/branding/sl-branding.jpg"
+                },
+                {
+                    category: "Branding",
+                    title: "Restaurant Rebrand",
+                    description: "Fresh identity for an established restaurant chain",
+                    image: "https://request-digital.b-cdn.net/branding/ss-branding.jpg"
+                },
+                {
+                    category: "Web Design",
+                    title: "Portfolio Website",
+                    description: "Sleek portfolio site for a photographer",
+                    image: "assets/portfolio-5.jpg"
+                },
+                {
+                    category: "Merch",
+                    title: "Product Animation",
+                    description: "3D animation showcasing product features",
+                    image: "https://request-digital.b-cdn.net/merch/aa-merch.jpg"
+                },
+                {
+                    category: "Merch",
+                    title: "Product Animation",
+                    description: "3D animation showcasing product features",
+                    image: "https://request-digital.b-cdn.net/merch/dogestore-ui-merch-2.jpg"
+                },
+                {
+                    category: "Merch",
+                    title: "Product Animation",
+                    description: "3D animation showcasing product features",
+                    image: "https://request-digital.b-cdn.net/merch/dogestore-ui-merch-3.jpg"
+                },
+                {
+                    category: "Merch",
+                    title: "Product Animation",
+                    description: "3D animation showcasing product features",
+                    image: "https://request-digital.b-cdn.net/merch/dogestore-ui-merch.jpg"
+                },
+                {
+                    category: "Merch",
+                    title: "Product Animation",
+                    description: "3D animation showcasing product features",
+                    image: "https://request-digital.b-cdn.net/merch/ll-merch.jpg"
+                },
+                {
+                    category: "Merch",
+                    title: "Product Animation",
+                    description: "3D animation showcasing product features",
+                    image: "https://request-digital.b-cdn.net/merch/lm-merch.jpg"
+                },
+                {
+                    category: "Merch",
+                    title: "Product Animation",
+                    description: "3D animation showcasing product features",
+                    image: "https://request-digital.b-cdn.net/merch/rr-merch-1.jpg"
+                },
+                {
+                    category: "Merch",
+                    title: "Product Animation",
+                    description: "3D animation showcasing product features",
+                    image: "https://request-digital.b-cdn.net/merch/rr-merch-2.jpg"
+                },
+                {
+                    category: "Merch",
+                    title: "Product Animation",
+                    description: "3D animation showcasing product features",
+                    image: "https://request-digital.b-cdn.net/merch/rr-merch-3-1.jpg"
+                },
+                {
+                    category: "Merch",
+                    title: "Product Animation",
+                    description: "3D animation showcasing product features",
+                    image: "https://request-digital.b-cdn.net/merch/rr-merch-3.jpg"
+                },
+                {
+                    category: "Merch",
+                    title: "Product Animation",
+                    description: "3D animation showcasing product features",
+                    image: "https://request-digital.b-cdn.net/merch/sl-merch.jpg"
+                },
+                {
+                    category: "Merch",
+                    title: "Product Animation",
+                    description: "3D animation showcasing product features",
+                    image: "https://request-digital.b-cdn.net/merch/ss-merch-2.jpg"
+                },
+                {
+                    category: "Newsletter",
+                    title: "Product Animation",
+                    description: "3D animation showcasing product features",
+                    image: "https://request-digital.b-cdn.net/newsletter/supducks-newsletter-1.jpg"
+                },
+                {
+                    category: "Newsletter",
+                    title: "Product Animation",
+                    description: "3D animation showcasing product features",
+                    image: "https://request-digital.b-cdn.net/newsletter/supducks-newsletter-2.jpg"
+                }
+
+            ]
+        });
+        portfolio.render('portfolio-container');
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.querySelector('.background-video');
+            
+            // Force video play on iOS devices which sometimes block autoplay
+            video.play().catch(function(error) {
+                console.log('Autoplay was prevented:', error);
+                
+                // Add a click event listener to the video container to start playing on user interaction
+                document.querySelector('.video-background').addEventListener('click', function() {
+                    video.play();
+                });
+            });
+            
+            // Ensure video stays properly sized when window is resized
+            window.addEventListener('resize', function() {
+                // Nothing specific needed here as object-fit:cover handles the sizing,
+                // but you could add custom logic if needed
+            });
+        });
+        </script>
+        <div id="lightbox" class="lightbox">
+            <div class="lightbox-content">
+                <span class="lightbox-close">&times;</span>
+                <img class="lightbox-image" id="lightbox-image">
+                <div class="lightbox-caption" id="lightbox-caption"></div>
+                <a class="lightbox-prev">&#10094;</a>
+                <a class="lightbox-next">&#10095;</a>
+            </div>
+        </div>
+</body>
+</html>

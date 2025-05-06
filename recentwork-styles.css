@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Circular Std', 'Figtree', sans-serif;
+    width:100%;
+}
+.see-recent-work {
+    position: relative;
+    line-height: 20px;
+    font-weight: 500;
+}
+.button {
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 17px;
+    cursor: pointer; /* Add pointer cursor */
+    transition: all 0.3s ease; /* Add smooth transition for all properties */
+}
+
+.button:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-3px); /* Slight upward movement on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+.video {
+    flex: 1;
+    border-radius: 24px;
+    height: 479px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 120px 32px;
+    box-sizing: border-box;
+    background-image: url('assets/video.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.video-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 1250px;
+}
+.recent-work-section {
+    width: 100%;
+    position: relative;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+    font-family: Figtree;
+}
+

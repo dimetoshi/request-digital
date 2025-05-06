@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./contact-section.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap" />
+</head>
+<body>
+    
+    <div class="home">
+        <div id="hero-container"></div>
+        <div id="process-container"></div>
+        <div id="about-container"></div>
+        <div id="recentwork-container"></div>
+        <div id="services-container"></div>
+        <div id="pricing-container"></div>
+        <div id="faq-container"></div>
+        <div id="footer-container"></div>
+    </div>
+    
+    <script src="hero-section.js"></script>
+    <script src="process-section.js"></script>
+    <script src="about-section.js"></script>
+    <script src="recentwork-section.js"></script>
+    <script src="service-section.js"></script>
+    <script src="pricing-section.js"></script>
+    <script src="faq-section.js"></script>
+    <script src="footer-section.js"></script>
+    <script>
+        // Initialize and render the hero section with Spline in booking card
+        const hero = new HeroSection({
+            title: "Design Subscriptions For Everyone",
+            subtitle: "Pause or cancel anytime.",
+            cardTitle: "Join Today",
+            cardDescription: "Subscribe to a plan & request as many designs as you'd like.",
+            splineUrl: "https://my.spline.design/untitled-ZBC6TM80CK04bZj1XJtZMx3s/",
+            backgroundImage: "assets/booking-card.png" // Fallback image
+        });
+        hero.render('hero-container');
+        
+        // Initialize and render the process section
+        const process = new ProcessSection({
+            categoryTitle: "Process",
+            sectionTitle: "A very simple process for optimised delivery",
+            processCards: [
+                {
+                    number: "01",
+                    title: "Subscribe",
+                    description: "Subscribe to a plan & request as many designs as you'd like.",
+                    backgroundImage: "assets/subscribe-card.jpg",
+                    backgroundColor: "#333333",
+                    gradient: "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.95))" // Custom gradient
+                },
+                {
+                    number: "02",
+                    title: "Request",
+                    description: "Submit design requests and we'll get to work immediately.",
+                    backgroundImage: "assets/request-card.jpg",
+                    backgroundColor: "#444444",
+                    gradient: "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(255, 202, 0, 0.85))" // Different gradient
+                },
+                {
+                    number: "03",
+                    title: "Review",
+                    description: "Review designs, request revisions, and approve final versions.",
+                    backgroundImage: "assets/receive-card.jpg",
+                    backgroundColor: "#555555",
+                    gradient: "linear-gradient(180deg, transparent, rgba(92, 128, 156, 0.85))" // Another gradient option
+                }
+            ],
+            clientLogos: [
+                "assets/clientLogo-1.svg",
+                "assets/clientLogo-2.svg",
+                "assets/clientLogo-3.svg",
+                "assets/clientLogo-4.svg",
+                "assets/clientLogo-5.svg"
+            ]
+        });
+        process.render('process-container');
+        
+        // Initialize and render the about section
+        const about = new AboutSection({
+            description: "Hi, I'm Alex, a multi-disciplinary designer with over 10 years of experience creating impactful digital experiences. My approach combines strategic thinking with creative execution to deliver designs that not only look great but also achieve your business goals.<br><br>I specialize in branding, UI/UX design, and web development, with a particular focus on creating cohesive design systems that scale across platforms. My goal is to make the design process enjoyable and transparent while delivering exceptional results.",
+            socialLinks: [
+                { icon: "assets/instagram-icon.svg", url: "https://instagram.com/" },
+                { icon: "assets/linkedin-icon.svg", url: "https://linkedin.com/" },
+                { icon: "assets/dribbble-icon.svg", url: "https://dribbble.com/" }
+            ]
+        });
+        about.render('about-container');
+        
+        // Initialize and render the recent work section
+        const recentWork = new RecentWorkSection({
+            buttonText: "See Recent Work",
+            backgroundImage: "assets/video.png", // Fallback image
+            backgroundVideo: "assets/rd-recentwork-ƒ.mp4", // Your video file
+            buttonLink: "/portfolio.html"
+        });
+        recentWork.render('recentwork-container');
+        
+        // Initialize and render the services section
+        const services = new ServiceSection({
+            categoryTitle: "Skills & Services",
+            sectionTitle: "All the things you need under one roof",
+            services: [
+                [
+                    "Memes", "Infographics", "AI Image Generation", 
+                    "AI Videos", "Graphic Design", "Branding",
+                ],
+                [
+                    "Logos", "NFT Art", "Email Newsletters", "Landing Pages", 
+                    "UI/UX Design", "Slide Decks",
+                ],
+                [
+                    "Web Design", "Display Ads", "Animations", 
+                    "Merch Design", "Website Development", "+ More"
+                ]
+            ]
+        });
+        services.render('services-container');
+        
+        // Initialize and render the pricing section
+        const pricing = new PricingSection({
+            categoryTitle: "Pricing",
+            sectionTitle: "Simple, transparent pricing",
+            pricingCards: [
+                {
+                    title: "Basic",
+                    popular: false,
+                    price: "$2,995",
+                    period: "per month"
+                },
+                {
+                    title: "Standard",
+                    popular: true,
+                    price: "$4,995",
+                    period: "per month"
+                },
+                {
+                    title: "Premium",
+                    popular: false,
+                    price: "$7,995",
+                    period: "per month"
+                }
+            ],
+            features: [
+                "One request at a time",
+                "Avg. 48 hour delivery",
+                "Unlimited Brands & Projects",
+                "Up to 2 users",
+                "Pause or cancel anytime"
+            ],
+            specialFeatures: [
+                {
+                    title: "Pause or cancel anytime",
+                    description: "Temporarily pause your subscription anytime, no sweat."
+                },
+                {
+                    title: "Try it for a week",
+                    description: "Not loving it after a week? Get 75% back, no questions asked."
+                }
+            ]
+        });
+        pricing.render('pricing-container');
+
+        const faq = new FaqSection({
+            categoryTitle: "FAQ",
+            sectionTitle: "Frequently Asked Questions",
+            faqs: [
+                {
+                    question: "How fast will I receive my designs?",
+                    answer: "Most designs are delivered within 48 hours. More complex projects may take longer depending on the scope and your subscription plan."
+                },
+                {
+                    question: "How many design requests can I make?",
+                    answer: "You can make unlimited requests, but we work on them one at a time in order of submission. As soon as one is completed, we move to the next in your queue."
+                },
+                {
+                    question: "What if I'm not happy with the designs?",
+                    answer: "We offer unlimited revisions until you're 100% satisfied with the results. Your happiness is our priority, and we'll work closely with you to ensure the final design meets your needs."
+                },
+                {
+                    question: "What design software do you use?",
+                    answer: "We primarily use industry-standard tools like Adobe Creative Suite, Figma, and Sketch. If you have specific format requirements, just let us know and we'll accommodate them."
+                },
+                {
+                    question: "Can I cancel my subscription anytime?",
+                    answer: "Yes, you can cancel or pause your subscription at any time with no questions asked. There are no long-term contracts or cancellation fees."
+                },
+                {
+                    question: "What file formats will I receive?",
+                    answer: "You'll receive your designs in all industry-standard formats needed for your specific project, including AI, PSD, PDF, PNG, JPG, and SVG files as appropriate."
+                }
+            ],
+            cardTitle: "Join Today",
+            cardDescription: "Subscribe to a plan & request as many designs as you'd like.",
+            buttonText: "See Pricing",
+            callButtonText: "Book a 15 Minute Intro Call",
+            buttonLink: "#pricing-container",
+            callButtonLink: "#contact",
+            backgroundImage: "assets/booking-card.png",
+            splineUrl: "https://my.spline.design/untitled-ZBC6TM80CK04bZj1XJtZMx3s/"
+        });
+        faq.render('faq-container');
+        
+        // Initialize and render the footer section
+        const footer = new FooterSection({
+            companyName: "Design Studio",
+            year: 2025,
+            links: [
+                { text: "Home", url: "/" },
+                { text: "Portfolio", url: "/portfolio.html" },
+                { text: "Services", url: "#services-container" },
+                { text: "Pricing", url: "#pricing-container" },
+                { text: "FAQ", url: "#faq-container" }
+            ],
+            socialLinks: [
+                { icon: "assets/instagram-icon.svg", url: "https://instagram.com/" },
+                { icon: "assets/twitter-icon.svg", url: "https://twitter.com/" },
+                { icon: "assets/linkedin-icon.svg", url: "https://linkedin.com/" }
+            ]
+        });
+        footer.render('footer-container');
+    </script>
+    <script src="cal-popup.js"></script>
+</body>
+</html>

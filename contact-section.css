@@ -1,0 +1,130 @@
+/* Contact Section Styles */
+.contact-section {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 120px 0;
+}
+
+.contact-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.contact-section .category-title {
+    margin-bottom: 24px;
+}
+
+.contact-section .category-title p {
+    color: #999999;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.contact-text .section-title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 32px 0;
+    max-width: 500px;
+}
+
+.contact-buttons {
+    margin-top: 32px;
+}
+
+.primary-button, .book-call-button {
+    background-color: #e241ff;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 16px 32px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.primary-button:hover, .book-call-button:hover {
+    background-color: #d020eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(226, 65, 255, 0.3);
+}
+
+.cal-container {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 700px;
+}
+
+/* Cal.com widget customization */
+#my-cal-inline {
+    border-radius: 8px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    
+    .contact-text .section-title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 80px 0;
+    }
+    
+    .contact-container {
+        padding: 0 16px;
+    }
+    
+    .contact-text .section-title {
+        font-size: 32px;
+    }
+    
+    .cal-container {
+        padding: 16px;
+        height: 600px;
+    }
+    
+    .primary-button, .book-call-button {
+        padding: 14px 28px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cal-container {
+        height: 500px;
+    }
+    
+    .contact-text .section-title {
+        font-size: 28px;
+    }
+    
+    .primary-button, .book-call-button {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
