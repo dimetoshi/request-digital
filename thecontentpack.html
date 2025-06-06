@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Content Pack - Weekly Custom Branded Content Booster Pack</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Amazon Ember', Arial, sans-serif;
+            background: #fff;
+            color: #0F1111;
+            line-height: 1.4;
+        }
+
+        .header {
+            background: #232F3E;
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .header-content {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .cp-logo {
+            width: 24px;
+            height: 24px;
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+            border-radius: 3px;
+        }
+
+        .cp-logo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            clip-path: polygon(0% 0%, 65% 0%, 100% 35%, 100% 100%, 35% 100%, 0% 65%);
+        }
+
+        .cp-logo::after {
+            content: '';
+            position: absolute;
+            top: 35%;
+            left: 35%;
+            width: 65%;
+            height: 65%;
+            background: #000;
+            clip-path: polygon(0% 0%, 65% 0%, 100% 35%, 100% 100%, 35% 100%, 0% 65%);
+        }
+
+        .breadcrumb {
+            background: #F7F8F8;
+            padding: 8px 0;
+            font-size: 12px;
+            border-bottom: 1px solid #DDD;
+        }
+
+        .breadcrumb-content {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .breadcrumb a {
+            color: #007185;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .product-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 60px 20px 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .product-images {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 80vh;
+            position: sticky;
+            top: 20px;
+        }
+
+        .main-image {
+            flex: 1;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .pack-display {
+            width: 400px;
+            height: 500px;
+            margin: 0 auto;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: float 4s ease-in-out infinite;
+            cursor: pointer;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .pack-display:hover {
+            transform: rotateY(10deg) rotateX(5deg) scale(1.02);
+        }
+
+        .pack-front {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, 
+                #e8e8e8 0%, #c0c0c0 15%, #a8a8a8 30%, 
+                #d4d4d4 45%, #f0f0f0 60%, #c8c8c8 75%, 
+                #a0a0a0 90%, #e0e0e0 100%);
+            border-radius: 20px;
+            border: 2px solid #999;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pack-front::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.2) 50%, transparent 70%);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) skewX(-45deg); }
+            100% { transform: translateX(200%) skewX(-45deg); }
+        }
+
+        .brand-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(145deg, #000, #333);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .badge-logo {
+            width: 35px;
+            height: 35px;
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .badge-logo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            clip-path: polygon(0% 0%, 65% 0%, 100% 35%, 100% 100%, 35% 100%, 0% 65%);
+        }
+
+        .badge-logo::after {
+            content: '';
+            position: absolute;
+            top: 35%;
+            left: 35%;
+            width: 65%;
+            height: 65%;
+            background: #000;
+            clip-path: polygon(0% 0%, 65% 0%, 100% 35%, 100% 100%, 35% 100%, 0% 65%);
+        }
+
+        .pack-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .pack-subtitle {
+            font-size: 14px;
+            color: #444;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .holographic-center {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(45deg, 
+                rgba(255,0,150,0.3) 0%, 
+                rgba(0,255,255,0.3) 25%, 
+                rgba(255,255,0,0.3) 50%, 
+                rgba(150,0,255,0.3) 75%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            border: 3px solid rgba(255,255,255,0.6);
+            animation: rainbow-pulse 4s infinite;
+            margin-bottom: 30px;
+        }
+
+        @keyframes rainbow-pulse {
+            0%, 100% { background: linear-gradient(45deg, rgba(255,0,150,0.3), rgba(0,255,255,0.3)); }
+            50% { background: linear-gradient(45deg, rgba(0,255,255,0.4), rgba(150,0,255,0.4)); }
+        }
+
+        .pack-features {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .feature-tag {
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .pack-count {
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            text-align: center;
+        }
+
+        .thumbnail-images {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .thumbnail {
+            width: 60px;
+            height: 80px;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: all 0.2s ease;
+        }
+
+        .thumbnail:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .thumbnail.active {
+            border-color: #007185;
+            opacity: 1;
+        }
+
+        .product-info {
+            padding-left: 20px;
+        }
+
+        .product-title {
+            font-size: 32px;
+            font-weight: normal;
+            color: #0F1111;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .rating-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .stars {
+            color: #FF9900;
+            font-size: 16px;
+        }
+
+        .rating-text {
+            color: #007185;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .rating-text:hover {
+            text-decoration: underline;
+        }
+
+        .price-section {
+            margin-bottom: 20px;
+        }
+
+        .price-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .price-badge-label {
+            background: #B12704;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .price-badge-text {
+            color: #0F1111;
+            font-size: 14px;
+        }
+
+        .price {
+            font-size: 28px;
+            color: #0F1111;
+            font-weight: normal;
+        }
+
+        .price-details {
+            font-size: 14px;
+            color: #565959;
+            margin-top: 5px;
+        }
+
+        .savings-info {
+            color: #007600;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 8px;
+        }
+
+        .delivery-info {
+            background: #F7F8F8;
+            border: 1px solid #D5D9D9;
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 20px;
+        }
+
+        .delivery-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #0F1111;
+        }
+
+        .delivery-details {
+            font-size: 14px;
+            color: #565959;
+        }
+
+        .stock-level {
+            background: #F7F8F8;
+            border: 1px solid #D5D9D9;
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 20px;
+        }
+
+        .stock-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .stock-label {
+            font-weight: bold;
+            color: #0F1111;
+            font-size: 14px;
+        }
+
+        .stock-count {
+            color: #006400;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .stock-bar {
+            height: 8px;
+            background: #F1F1F1;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .stock-fill {
+            height: 100%;
+            background: #006400;
+            transition: width 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .options-section {
+            margin-bottom: 20px;
+        }
+
+        .option-label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #0F1111;
+        }
+
+        .option-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .option-btn {
+            padding: 8px 12px;
+            border: 1px solid #D5D9D9;
+            border-radius: 8px;
+            background: #FFF;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .option-btn:hover {
+            border-color: #007185;
+        }
+
+        .option-btn.selected {
+            border-color: #007185;
+            box-shadow: 0 0 0 1px #007185;
+        }
+
+        .quantity-section {
+            margin-bottom: 20px;
+        }
+
+        .quantity-select {
+            padding: 8px;
+            border: 1px solid #D5D9D9;
+            border-radius: 8px;
+            background: #F7F8F8;
+            font-size: 14px;
+            width: 300px;
+        }
+
+        .action-buttons {
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background: #FF9900;
+            border: none;
+            color: #000;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            transition: background 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: #FA8900;
+        }
+
+        .btn-secondary {
+            background: #FFA41C;
+            border: none;
+            color: #000;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .btn-secondary:hover {
+            background: #FF8F00;
+        }
+
+        .security-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: #565959;
+            margin-bottom: 15px;
+        }
+
+        .feature-highlights {
+            border: 1px solid #D5D9D9;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .feature-highlights h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #0F1111;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            padding: 4px 0;
+            font-size: 14px;
+            color: #565959;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #007600;
+            font-weight: bold;
+        }
+
+        .related-section {
+            background: #fff;
+            max-width: 1500px;
+            margin: 40px auto;
+            padding: 40px 15px;
+            border-top: 1px solid #E7E7E7;
+        }
+
+        .related-header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0F1111;
+            margin-bottom: 20px;
+        }
+
+        .related-grid {
+            display: flex;
+            gap: 20px;
+            position: relative;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 0 50px 0 0;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .related-grid::-webkit-scrollbar {
+            display: none;
+        }
+
+        .related-item {
+            border: 1px solid #E7E7E7;
+            border-radius: 8px;
+            padding: 15px;
+            background: #fff;
+            transition: all 0.2s;
+            cursor: pointer;
+            text-align: center;
+            min-width: 200px;
+            flex-shrink: 0;
+        }
+
+        .related-item:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-color: #007185;
+        }
+
+        .related-preview {
+            width: 100%;
+            height: 140px;
+            background: #F7F8F8;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .related-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .related-preview::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer-prev 3s infinite;
+        }
+
+        @keyframes shimmer-prev {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .related-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #0F1111;
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+
+        .related-meta {
+            font-size: 12px;
+            color: #565959;
+            margin-bottom: 8px;
+        }
+
+        .related-badge {
+            background: #FF9900;
+            color: #000;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 10px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        .related-badge.bestseller {
+            background: #FF4545;
+            color: #fff;
+        }
+
+        .related-badge.choice {
+            background: #232F3E;
+            color: #fff;
+        }
+
+        .related-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border: 1px solid #D5D9D9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 16px;
+            color: #565959;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.2s;
+            z-index: 10;
+        }
+
+        .related-nav:hover {
+            background: #F7F8F8;
+            border-color: #007185;
+        }
+
+        .related-nav.prev {
+            left: 10px;
+            display: none;
+        }
+
+        .related-nav.next {
+            right: 10px;
+        }
+
+        .reviews-section {
+            background: #fff;
+            max-width: 1500px;
+            margin: 40px auto;
+            padding: 40px 15px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+
+        .reviews-overview {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        .reviews-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #0F1111;
+        }
+
+        .overall-rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+
+        .overall-stars {
+            color: #FF9900;
+            font-size: 16px;
+        }
+
+        .overall-score {
+            font-size: 16px;
+            color: #0F1111;
+        }
+
+        .total-ratings {
+            font-size: 14px;
+            color: #565959;
+            margin-bottom: 20px;
+        }
+
+        .rating-breakdown {
+            margin-bottom: 30px;
+        }
+
+        .rating-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+
+        .rating-label {
+            font-size: 14px;
+            color: #007185;
+            text-decoration: none;
+            width: 50px;
+        }
+
+        .rating-label:hover {
+            text-decoration: underline;
+        }
+
+        .rating-bar {
+            flex: 1;
+            height: 20px;
+            background: #F1F1F1;
+            border-radius: 3px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .rating-fill {
+            height: 100%;
+            background: #FF9900;
+            transition: width 0.3s ease;
+        }
+
+        .rating-percentage {
+            font-size: 14px;
+            color: #007185;
+            text-decoration: none;
+            width: 35px;
+            text-align: right;
+        }
+
+        .rating-percentage:hover {
+            text-decoration: underline;
+        }
+
+        .write-review {
+            border: 1px solid #D5D9D9;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .write-review h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #0F1111;
+        }
+
+        .write-review p {
+            font-size: 14px;
+            color: #565959;
+            margin-bottom: 15px;
+        }
+
+        .write-review-btn {
+            background: #fff;
+            border: 1px solid #D5D9D9;
+            color: #0F1111;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .write-review-btn:hover {
+            background: #F7F8F8;
+            border-color: #007185;
+        }
+
+        .reviews-content {
+            background: #fff;
+        }
+
+        .reviews-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #E7E7E7;
+        }
+
+        .reviews-content-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0F1111;
+        }
+
+        .reviews-filter {
+            font-size: 14px;
+            color: #565959;
+        }
+
+        .review-item {
+            border-bottom: 1px solid #E7E7E7;
+            padding: 20px 0;
+        }
+
+        .review-item:last-child {
+            border-bottom: none;
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .reviewer-avatar {
+            width: 40px;
+            height: 40px;
+            background: #D5D9D9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #565959;
+        }
+
+        .reviewer-name {
+            font-weight: bold;
+            color: #0F1111;
+            font-size: 14px;
+        }
+
+        .review-rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+
+        .review-stars {
+            color: #FF9900;
+            font-size: 14px;
+        }
+
+        .review-title {
+            font-weight: bold;
+            color: #0F1111;
+            font-size: 14px;
+        }
+
+        .review-meta {
+            font-size: 12px;
+            color: #565959;
+            margin-bottom: 5px;
+        }
+
+        .verified-badge {
+            color: #FF9900;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .review-text {
+            font-size: 14px;
+            color: #0F1111;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .review-actions {
+            display: flex;
+            gap: 15px;
+            font-size: 12px;
+        }
+
+        .review-action {
+            color: #565959;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .review-action:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 1024px) {
+            .reviews-section {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .product-images {
+                min-height: auto;
+                position: static;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .thumbnail-images {
+                flex-direction: row;
+                justify-content: center;
+                padding-top: 10px;
+            }
+            
+            .main-image {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="#" class="logo">
+                <div class="cp-logo"></div>
+                The Content Pack
+            </a>
+            <span>Premium Branded Content Delivery</span>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="breadcrumb-content">
+            Digital Content › Content Pack › Weekly Content Booster Pack
+        </div>
+    </div>
+
+    <div class="product-container">
+        <div class="product-images">
+            <div class="thumbnail-images">
+                <div class="thumbnail active"></div>
+                <div class="thumbnail"></div>
+                <div class="thumbnail"></div>
+                <div class="thumbnail"></div>
+            </div>
+            
+            <div class="main-image">
+                <div class="pack-display" onclick="openPack()">
+                    <div class="pack-front">
+                        <div class="brand-badge">
+                            <div class="badge-logo"></div>
+                        </div>
+                        
+                        <div class="pack-title">Content Pack</div>
+                        <div class="pack-subtitle">Weekly Booster Edition</div>
+                        
+                        <div class="holographic-center">📦</div>
+                        
+                        <div class="pack-features">
+                            <div class="feature-tag">Custom Branded</div>
+                            <div class="feature-tag">AI Enhanced</div>
+                            <div class="feature-tag">Trending Topics</div>
+                        </div>
+                        
+                        <div class="pack-count">8 PIECES MONTHLY</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-info">
+            <h1 class="product-title">The Content Pack - Weekly Custom Branded Content Pack - 8 Pieces (Monthly Subscription)</h1>
+            
+            <div class="rating-section">
+                <div class="stars">★★★★★</div>
+                <a href="#" class="rating-text">4.8 out of 5 (47 customer reviews)</a>
+            </div>
+
+            <div class="price-section">
+                <div class="price-badge">
+                    <div class="price-badge-label">Super Early Bird Price</div>
+                    <div class="price-badge-text">for the first 100 packs</div>
+                </div>
+                <div class="price" id="main-price">$150<span style="font-size: 16px; color: #565959;" id="price-period">/month</span></div>
+                <div class="price-details" id="price-details">Price increases by 10% after 100 packs | Lock in this rate forever</div>
+                <div class="savings-info" id="savings-info" style="display: none;"></div>
+            </div>
+
+            <div class="stock-level">
+                <div class="stock-info">
+                    <span class="stock-label">Super Early Bird Packs Remaining:</span>
+                    <span class="stock-count">73 of 100</span>
+                </div>
+                <div class="stock-bar">
+                    <div class="stock-fill" style="width: 73%"></div>
+                </div>
+            </div>
+
+            <div class="delivery-info">
+                <div class="delivery-title">📧 Digital Delivery</div>
+                <div class="delivery-details">
+                    Weekly content packs delivered to your private dashboard every Tuesday.<br>
+                    First pack arrives within 3-5 business days of subscription.
+                </div>
+            </div>
+
+            <div class="quantity-section">
+                <label for="quantity" class="option-label">Subscription Plan:</label>
+                <select id="quantity" class="quantity-select" onchange="updatePricing()">
+                    <option value="monthly">1 Month - $150/month</option>
+                    <option value="6month">6 Months - $135/month (Save 10%)</option>
+                    <option value="12month">12 Months - $120/month (Save 20%)</option>
+                </select>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-primary" onclick="subscribe()">Subscribe Now - Early Bird Member Rate</button>
+                <button class="btn-secondary" onclick="requestSample()">Request Custom Sample Pack</button>
+            </div>
+
+            <div class="security-badge">
+                🔒 Secure payment processing | Cancel anytime | No setup fees
+            </div>
+
+            <div class="feature-highlights">
+                <h3>What's Included in Your Weekly Booster Pack:</h3>
+                <ul class="feature-list">
+                    <li>8 custom branded content pieces per month</li>
+                    <li>2 fresh pieces delivered every Tuesday</li>
+                    <li>AI-enhanced memes and graphics</li>
+                    <li>Motion graphics and GIF animations</li>
+                    <li>Multiple format options (Square, Story, HD)</li>
+                    <li>Trending topic integration</li>
+                    <li>Private client dashboard access</li>
+                    <li>Brand consistency across all pieces</li>
+                    <li>Commercial usage rights included</li>
+                    <li>24/7 dashboard access and downloads</li>
+                </ul>
+            </div>
+
+            <div class="feature-highlights">
+                <h3>Why Choose The Content Pack:</h3>
+                <ul class="feature-list">
+                    <li>100% custom branded content (no templates)</li>
+                    <li>Professional AI + Photoshop + motion graphics</li>
+                    <li>Weekly excitement of new pack arrivals</li>
+                    <li>Stay ahead of trending topics automatically</li>
+                    <li>Early bird member pricing locked in forever</li>
+                    <li>Cancel anytime, no long-term contracts</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="related-section">
+        <h2 class="related-header">Sample content from previous Content Packs</h2>
+        <div class="related-container" style="position: relative;">
+            <div class="related-nav prev" onclick="scrollRelated(-1)">‹</div>
+            <div class="related-nav next" onclick="scrollRelated(1)">›</div>
+            
+            <div class="related-grid" id="related-grid">
+                <!-- Items will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <div class="reviews-section">
+        <div class="reviews-overview">
+            <h2 class="reviews-title">Customer reviews</h2>
+            <div class="overall-rating">
+                <div class="overall-stars">★★★★☆</div>
+                <div class="overall-score">4.7 out of 5</div>
+            </div>
+            <div class="total-ratings">23 global ratings</div>
+            
+            <div class="rating-breakdown">
+                <div class="rating-row">
+                    <a href="#" class="rating-label">5 star</a>
+                    <div class="rating-bar">
+                        <div class="rating-fill" style="width: 78%"></div>
+                    </div>
+                    <a href="#" class="rating-percentage">78%</a>
+                </div>
+                <div class="rating-row">
+                    <a href="#" class="rating-label">4 star</a>
+                    <div class="rating-bar">
+                        <div class="rating-fill" style="width: 17%"></div>
+                    </div>
+                    <a href="#" class="rating-percentage">17%</a>
+                </div>
+                <div class="rating-row">
+                    <a href="#" class="rating-label">3 star</a>
+                    <div class="rating-bar">
+                        <div class="rating-fill" style="width: 4%"></div>
+                    </div>
+                    <a href="#" class="rating-percentage">4%</a>
+                </div>
+                <div class="rating-row">
+                    <a href="#" class="rating-label">2 star</a>
+                    <div class="rating-bar">
+                        <div class="rating-fill" style="width: 0%"></div>
+                    </div>
+                    <a href="#" class="rating-percentage">0%</a>
+                </div>
+                <div class="rating-row">
+                    <a href="#" class="rating-label">1 star</a>
+                    <div class="rating-bar">
+                        <div class="rating-fill" style="width: 1%"></div>
+                    </div>
+                    <a href="#" class="rating-percentage">1%</a>
+                </div>
+            </div>
+
+            <div class="write-review">
+                <h3>Review this service</h3>
+                <p>Share your thoughts with other customers</p>
+                <button class="write-review-btn" onclick="writeReview()">Write a customer review</button>
+            </div>
+        </div>
+
+        <div class="reviews-content">
+            <div class="reviews-header">
+                <h3 class="reviews-content-title">Top reviews from other countries</h3>
+                <div class="reviews-filter">Sort by: Most recent</div>
+            </div>
+
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-avatar">MS</div>
+                    <div class="reviewer-name">Marcus S.</div>
+                </div>
+                <div class="review-rating">
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-title">Game changer for our crypto brand</div>
+                </div>
+                <div class="review-meta">
+                    Reviewed in the United States on 15 February 2025<br>
+                    <span class="verified-badge">Verified Purchase</span>
+                </div>
+                <div class="review-text">
+                    We've been using The Content Pack for 3 months now and the quality is unreal. Every Tuesday feels like Christmas morning when the new pack drops. The memes are always on-trend and perfectly match our brand voice. Our engagement has gone up 340% since we started. Worth every penny of the early bird member rate.
+                </div>
+                <div class="review-actions">
+                    <span class="review-action">Helpful</span>
+                    <span class="review-action">Report</span>
+                </div>
+            </div>
+
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-avatar">JK</div>
+                    <div class="reviewer-name">Jenny K.</div>
+                </div>
+                <div class="review-rating">
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-title">Finally, content that doesn't look generic</div>
+                </div>
+                <div class="review-meta">
+                    Reviewed in Canada on 8 February 2025<br>
+                    <span class="verified-badge">Verified Purchase</span>
+                </div>
+                <div class="review-text">
+                    As a SaaS marketing manager, I was so tired of using the same old stock memes everyone else uses. The Content Pack creates completely custom pieces that actually represent our brand. The dashboard is super clean and I love being able to download different formats. Pack opening experience is addictive!
+                </div>
+                <div class="review-actions">
+                    <span class="review-action">Helpful</span>
+                    <span class="review-action">Report</span>
+                </div>
+            </div>
+
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-avatar">DR</div>
+                    <div class="reviewer-name">David R.</div>
+                </div>
+                <div class="review-rating">
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-title">Best content investment we've made</div>
+                </div>
+                <div class="review-meta">
+                    Reviewed in the United Kingdom on 2 February 2025<br>
+                    <span class="verified-badge">Verified Purchase</span>
+                </div>
+                <div class="review-text">
+                    Been an early bird member since month 1. The quality keeps getting better and they somehow always nail trending topics before they peak. My team actually fights over who gets to open the weekly packs. ROI is incredible - we're getting way more engagement than when we had an in-house designer making content.
+                </div>
+                <div class="review-actions">
+                    <span class="review-action">Helpful</span>
+                    <span class="review-action">Report</span>
+                </div>
+            </div>
+
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-avatar">AL</div>
+                    <div class="reviewer-name">Alex L.</div>
+                </div>
+                <div class="review-rating">
+                    <div class="review-stars">★★★★☆</div>
+                    <div class="review-title">Great service, minor delivery delay</div>
+                </div>
+                <div class="review-meta">
+                    Reviewed in Australia on 28 January 2025<br>
+                    <span class="verified-badge">Verified Purchase</span>
+                </div>
+                <div class="review-text">
+                    Content quality is excellent and the pack opening experience is really well done. Had one week where delivery was delayed but they threw in an extra piece to make up for it. Dashboard could use a search function but overall very happy. Definitely recommend for crypto projects.
+                </div>
+                <div class="review-actions">
+                    <span class="review-action">Helpful</span>
+                    <span class="review-action">Report</span>
+                </div>
+            </div>
+
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-avatar">ST</div>
+                    <div class="reviewer-name">Sarah T.</div>
+                </div>
+                <div class="review-rating">
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-title">Saves me 10+ hours per week</div>
+                </div>
+                <div class="review-meta">
+                    Reviewed in the United States on 22 January 2025<br>
+                    <span class="verified-badge">Verified Purchase</span>
+                </div>
+                <div class="review-text">
+                    I run social media for a fitness brand and was spending way too much time creating memes. The Content Pack delivers exactly what I need, when I need it. The motion graphics are especially impressive. Early bird member pricing is a steal - this would easily cost $500+/month from an agency.
+                </div>
+                <div class="review-actions">
+                    <span class="review-action">Helpful</span>
+                    <span class="review-action">Report</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+function updatePricing() {
+    const select = document.getElementById('quantity');
+    const mainPrice = document.getElementById('main-price');
+    const priceDetails = document.getElementById('price-details');
+    const savingsInfo = document.getElementById('savings-info');
+    
+    if (!select || !mainPrice || !priceDetails || !savingsInfo) return;
+    
+    const selectedValue = select.value;
+    let price, period, details, savings, totalPrice;
+    
+    switch(selectedValue) {
+        case 'monthly':
+            price = '$150';
+            period = '/month';
+            details = 'Price increases by 10% after 100 packs | Lock in this rate forever';
+            savings = '';
+            break;
+        case '6month':
+            price = '$135';
+            period = '/month';
+            totalPrice = '$810';
+            details = 'Billed as one payment of $810 | Price increases by 10% after 100 packs';
+            savings = 'You save $90 compared to monthly billing!';
+            break;
+        case '12month':
+            price = '$120';
+            period = '/month';
+            totalPrice = '$1,440';
+            details = 'Billed as one payment of $1,440 | Price increases by 10% after 100 packs';
+            savings = 'You save $360 compared to monthly billing!';
+            break;
+    }
+    
+    let priceHtml = price + '<span style="font-size: 16px; color: #565959;">' + period + '</span>';
+    if (totalPrice) {
+        priceHtml += '<div style="font-size: 16px; color: #565959; margin-top: 4px;">Total: ' + totalPrice + '</div>';
+    }
+    mainPrice.innerHTML = priceHtml;
+    priceDetails.textContent = details;
+    
+    if (savings) {
+        savingsInfo.textContent = savings;
+        savingsInfo.style.display = 'block';
+    } else {
+        savingsInfo.style.display = 'none';
+    }
+}
+
+const relatedItems = [
+    {
+        id: 'crypto-moon',
+        badge: { text: 'Memes', class: 'bestseller' },
+        image: 'https://request-digital.b-cdn.net/memes/dogetimes-meme-1.jpg',
+        title: 'DogeTimes Crypto Memes',
+        meta: 'Modern meme design for crypto communities',
+        alt: 'Crypto Memes Pack'
+    },
+    {
+        id: 'saas-growth',
+        badge: { text: 'Graphic Design', class: 'choice' },
+        image: 'https://request-digital.b-cdn.net/graphicdesign/bit-graphicdesign.jpg',
+        title: 'Bitcoin Brand Graphics',
+        meta: 'Complete brand identity and graphic design',
+        alt: 'SaaS Growth Graphics'
+    },
+    {
+        id: 'fitness-motivation',
+        badge: { text: 'UI/UX', class: '' },
+        image: 'https://request-digital.b-cdn.net/ui/aa-ui-1.jpg',
+        title: 'Mobile App Interface Design',
+        meta: 'User-friendly design for mobile applications',
+        alt: 'Fitness App Interface'
+    },
+    {
+        id: 'viral-trends',
+        badge: { text: 'Trending', class: '' },
+        image: 'https://request-digital.b-cdn.net/memes/gecky-meme-1.jpg',
+        title: 'Gecky Viral Meme Collection',
+        meta: 'Trending meme content for social media',
+        alt: 'Viral Trends Memes'
+    },
+    {
+        id: 'ai-tech',
+        badge: { text: 'Branding', class: '' },
+        image: 'https://request-digital.b-cdn.net/branding/ll-branding.jpg',
+        title: 'Complete Brand Identity Package',
+        meta: 'Professional branding for modern businesses',
+        alt: 'AI Tech Branding'
+    },
+    {
+        id: 'ecommerce-sales',
+        badge: { text: 'Merch', class: '' },
+        image: 'https://request-digital.b-cdn.net/merch/aa-merch.jpg',
+        title: 'Custom Merchandise Design',
+        meta: 'Branded merchandise and apparel design',
+        alt: 'E-commerce Merch'
+    },
+    {
+        id: 'valentine-special',
+        badge: { text: 'Newsletter', class: '' },
+        image: 'https://request-digital.b-cdn.net/newsletter/supducks-newsletter-1.jpg',
+        title: 'SupDucks Newsletter Design',
+        meta: 'Email newsletter design and layout',
+        alt: 'Newsletter Design'
+    }
+];
+
+function createRelatedItem(item) {
+    const badgeHtml = item.badge.text ? 
+        '<div class="related-badge ' + item.badge.class + '">' + item.badge.text + '</div>' : '';
+    
+    return '<div class="related-item" onclick="viewSample(\'' + item.id + '\')">' +
+        badgeHtml +
+        '<div class="related-preview">' +
+        '<img src="' + item.image + '" alt="' + item.alt + '" />' +
+        '</div>' +
+        '<div class="related-title">' + item.title + '</div>' +
+        '<div class="related-meta">' + item.meta + '</div>' +
+        '</div>';
+}
+
+function renderRelatedItems() {
+    const container = document.getElementById('related-grid');
+    if (container) {
+        container.innerHTML = relatedItems.map(createRelatedItem).join('');
+    }
+}
+
+function openPack() {
+    const pack = document.querySelector('.pack-display');
+    pack.style.transform = 'rotateY(180deg) scale(0.9)';
+    pack.style.opacity = '0.8';
+    
+    setTimeout(function() {
+        alert('🎉 Content Pack Preview!\n\n📦 Sample Contents:\n• Trending crypto meme with your branding\n• Professional social media graphic\n• Animated GIF for stories\n• Multiple format versions\n\n✨ This is just a preview - real packs contain 8 custom pieces!\n\n🚀 Subscribe to get weekly packs delivered to your dashboard!');
+        
+        pack.style.transform = '';
+        pack.style.opacity = '';
+    }, 800);
+}
+
+function viewSample(sampleId) {
+    const samples = {
+        'crypto-moon': 'Crypto "To The Moon" memes with rocket animations and diamond hands graphics. Perfect for bull market content!',
+        'saas-growth': 'B2B SaaS growth hacking memes featuring conversion funnels, user acquisition, and startup life humor.',
+        'fitness-motivation': 'Monday motivation content with gym humor, workout challenges, and fitness journey memes.',
+        'viral-trends': 'Current event memes covering viral TikTok trends, Twitter drama, and pop culture moments.',
+        'ai-tech': 'AI and tech innovation content featuring ChatGPT humor, coding memes, and Silicon Valley culture.',
+        'ecommerce-sales': 'E-commerce focused content with shopping cart abandonment jokes, Black Friday prep, and customer service humor.',
+        'valentine-special': 'Valentine\'s Day themed content with romantic memes, couple goals, and holiday marketing humor.'
+    };
+    
+    alert('📦 Sample Content Preview!\n\n' + samples[sampleId] + '\n\n✨ This represents the style and quality you can expect in your weekly Content Packs!\n\n🎯 Subscribe to get fresh, custom content delivered every Tuesday!');
+}
+
+function scrollRelated(direction) {
+    const grid = document.querySelector('.related-grid');
+    const prevBtn = document.querySelector('.related-nav.prev');
+    const nextBtn = document.querySelector('.related-nav.next');
+    const itemWidth = 220;
+    const scrollAmount = itemWidth * 2;
+    
+    grid.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+    });
+    
+    setTimeout(function() {
+        const scrollLeft = grid.scrollLeft;
+        const maxScroll = grid.scrollWidth - grid.clientWidth;
+        
+        if (scrollLeft > 0) {
+            prevBtn.style.display = 'flex';
+        } else {
+            prevBtn.style.display = 'none';
+        }
+        
+        if (scrollLeft >= maxScroll - 5) {
+            nextBtn.style.display = 'none';
+        } else {
+            nextBtn.style.display = 'flex';
+        }
+    }, 300);
+}
+
+function subscribe() {
+    alert('🎯 Ready to Subscribe!\n\nNext Steps:\n• Complete brand questionnaire\n• Choose your industry focus\n• First pack delivered in 3-5 days\n• Weekly deliveries every Tuesday\n\nContact: hello@thecontentpack.com\n\nEarly Bird Member Rate: $150/month (locked in forever!)');
+}
+
+function requestSample() {
+    alert('📧 Sample Pack Request!\n\nWe\'ll create a custom sample pack specifically for your brand:\n\n• 2-3 branded sample pieces\n• Interactive pack opening experience\n• No obligation to subscribe\n• Perfect for evaluating our quality\n\nContact: hello@thecontentpack.com\nInclude: Company name, industry, and current social handles');
+}
+
+function writeReview() {
+    alert('📝 Write a Review!\n\nWe\'d love to hear about your Content Pack experience:\n\n• How has it impacted your social media engagement?\n• What\'s your favorite part of the weekly drops?\n• Any suggestions for improvement?\n\nContact: reviews@thecontentpack.com\n\nThank you for helping other brands discover us!');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    renderRelatedItems();
+    updatePricing();
+    
+    const prevBtn = document.querySelector('.related-nav.prev');
+    const nextBtn = document.querySelector('.related-nav.next');
+    const grid = document.querySelector('.related-grid');
+    
+    setTimeout(function() {
+        if (grid && grid.scrollWidth <= grid.clientWidth) {
+            nextBtn.style.display = 'none';
+        }
+    }, 100);
+});
+</script>
+</body>
+</html>
