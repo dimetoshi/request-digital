@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
+    <style>
+        .brand-name {
+            position: relative;
+            line-height: 19.2px;
+            text-decoration: none;
+            color: inherit;
+            transition: opacity 0.2s ease;
+        }
+        .brand-name:hover {
+            opacity: 0.7;
+        }
+        .text-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .navlabel {
+            width: 55.2px;
+            position: relative;
+            line-height: 19.2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20px;
+            flex-shrink: 0;
+            text-decoration: none;
+            color: inherit;
+            transition: opacity 0.2s ease;
+            cursor: pointer;
+        }
+        .navlabel:hover {
+            opacity: 0.7;
+        }
+        .navlinks {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+            font-size: 14.63px;
+        }
+        .navbar {
+            align-self: stretch;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            gap: 0px;
+            font-size: 16px;
+        }
+        .portfolio-image {
+            align-self: stretch;
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            flex-shrink: 0;
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+        }
+        .column1 {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+        .portfoliosection {
+            align-self: stretch;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 0px 16px;
+            gap: 20px;
+        }
+        .contact-links {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+        .contact-header {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .description-text {
+            margin: 0;
+        }
+        .description {
+            flex: 1;
+            position: relative;
+            line-height: 150%;
+        }
+        .description-column {
+            align-self: stretch;
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .status-dot {
+            width: 12px;
+            position: relative;
+            border-radius: 50%;
+            background-color: #bdff72;
+            height: 12px;
+        }
+        .status-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 4px;
+        }
+        .status-column {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            text-align: right;
+            font-size: 14.38px;
+        }
+        .info-section {
+            align-self: stretch;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 32px 16px;
+            gap: 20px;
+        }
+        .footer-links {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+        .back-to-top {
+            align-self: stretch;
+            flex: 1;
+            position: relative;
+            line-height: 19.2px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .back-to-top:hover {
+            transform: translateY(-2px);
+        }
+        .footer {
+            align-self: stretch;
+            border-top: 0.5px solid rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 16px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        .page {
+            width: 100%;
+            position: relative;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            text-align: left;
+            font-size: 14.5px;
+            color: #000;
+            font-family: Inter;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .portfoliosection {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .column1 {
+                width: 100%;
+            }
+            .info-section {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            .contact-header {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+            }
+            .description-column {
+                width: 100%;
+                justify-content: flex-start;
+                text-align: left;
+            }
+            .status-column {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+            }
+            .status-wrapper {
+                justify-content: flex-start;
+            }
+            .footer {
+                flex-direction: row;
+                gap: 10px;
+                align-items: flex-start;
+            }
+            .footer-links {
+                justify-content: flex-start;
+            }
+            .back-to-top {
+                justify-content: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="navbar">
+            <div class="text-wrapper">
+                <div class="brand-name">Dime</div>
+            </div>
+            <div class="navlinks">
+                <div class="text-wrapper">
+                    <div class="navlabel" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Contact</div>
+                </div>
+            </div>
+        </div>
+        <div class="portfoliosection">
+            <div class="column1">
+                <img class="portfolio-image" alt="" src="https://request-digital.b-cdn.net/DRIPUI-min.jpg">
+                <img class="portfolio-image" alt="" src="https://request-digital.b-cdn.net/PUPPETSMEME-min.jpg">
+                <img class="portfolio-image" alt="" src="https://request-digital.b-cdn.net/DRIPAVATA-min.jpg">
+                <img class="portfolio-image" alt="" src="https://request-digital.b-cdn.net/DOGEMERCH-min.jpg">
+            </div>
+            <div class="column1">
+                <img class="portfolio-image" alt="" src="https://request-digital.b-cdn.net/DOGEUI-min.jpg">
+                <img class="portfolio-image" alt="" src="https://request-digital.b-cdn.net/SUPDUCKS-min.jpg">
+                <img class="portfolio-image" alt="" src="https://request-digital.b-cdn.net/KRAKENUI-min.jpg">
+                <img class="portfolio-image" alt="" src="https://request-digital.b-cdn.net/GEKCYCAR-min.jpg">
+                <img class="portfolio-image" alt="" src="https://request-digital.b-cdn.net/DOGEMODEL-min.jpg">
+                <img class="portfolio-image" alt="" src="https://request-digital.b-cdn.net/AGENTID-min.jpg">
+            </div>
+            <div class="column1">
+                <img class="portfolio-image" alt="" src="https://request-digital.b-cdn.net/DOGEMEME-min.jpg">
+                <img class="portfolio-image" alt="" src="https://request-digital.b-cdn.net/DOGETEE-min.jpg">
+                <img class="portfolio-image" alt="" src="https://request-digital.b-cdn.net/DOGEMEME2-min.jpg">
+                <img class="portfolio-image" alt="" src="https://request-digital.b-cdn.net/DOGECUTS-min.jpg">
+            </div>
+        </div>
+        <div class="info-section" id="contact">
+            <div class="contact-header">
+                <div class="contact-links">
+                    <div class="text-wrapper">
+                        <div class="brand-name">Contact</div>
+                    </div>
+                </div>
+            </div>
+            <div class="description-column">
+                <div class="description">
+                    <p class="description-text">Your brand deserves the best. Let me help you achieve it with a beautiful UI, Memes and Custom-Designed Graphics.</p>
+                </div>
+            </div>
+            <div class="status-column">
+                <div class="status-wrapper">
+                    <div class="status-dot"></div>
+                    <div class="brand-name">Available for work</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-links">
+                <div class="text-wrapper">
+                    <a href="mailto:dimetoshi@gmail.com" class="brand-name">dimetoshi@gmail.com</a>
+                </div>
+                <div class="text-wrapper">
+                    <a href="https://x.com/dimetoshi" target="_blank" class="brand-name">x.com/dimetoshi</a>
+                </div>
+            </div>
+            <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+        </div>
+    </div>
+</body>
+</html>
