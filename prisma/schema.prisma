@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Report {
+  id          String       @id @default(cuid())
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  // User inputs stored as JSON
+  briefJson   String       // ResearchBrief object
+
+  // Research results stored as JSON
+  resultsJson String       // Research results including progress
+
+  // Status tracking
+  status      String       @default("pending") // pending, processing, completed, failed
+  progress    Int          @default(0) // 0-100
+
+  // Relations
+  competitors Competitor[]
+
+  @@index([createdAt])
+  @@index([status])
+}
+
+model Competitor {
+  id             String   @id @default(cuid())
+  createdAt      DateTime @default(now())
+
+  // Foreign key
+  reportId       String
+  report         Report   @relation(fields: [reportId], references: [id], onDelete: Cascade)
+
+  // Basic info
+  name           String
+  url            String
+
+  // Raw extracted data as JSON
+  extractedJson  String   // Raw HTML extraction data
+
+  // Structured parsed data as JSON
+  structuredJson String   // Parsed and structured fields
+
+  @@index([reportId])
+}
